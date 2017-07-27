@@ -1,0 +1,7 @@
+<div class="" style="height:100vh; background-color:#1c2b36; color:#fff;">
+  <ul>
+    <li *ngFor="let sidebar of sidebars; let i = index" style="padding:5px;">
+      <a routerLink="{{sidebar.routes}}" style="color:#5c798f;">{{sidebar.label}}</a>
+    </li>
+  </ul>
+</div>
