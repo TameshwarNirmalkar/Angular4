@@ -1,0 +1,18 @@
+<section>
+  <app-header></app-header>
+</section>
+<section class="container">
+  <div class="row">
+    <div class="col-md-8 col-lg-9 col-sm-12">
+      <div class="row" style="margin-right:5px;">
+        <div class="col-md-4 col-sm-6 itemCls mb-3" role="button" *ngFor="let product of products | async; let i=index">
+          <app-itemlist [product]="product"></app-itemlist>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 col-lg-3 col-sm-12 bg-white">
+      Your Cart
+    </div>
+  </div>
+</section>

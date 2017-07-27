@@ -1,0 +1,19 @@
+<section>
+  <div class="row">
+    <div class="col-lg-6 col-md-6 col-sm-6"><img src="./../../assets/images/logo_Mastercard.png" /></div>
+    <div class="col-lg-6 col-md-6 col-sm-6">
+      <div class="pull-left">
+        <img src="{{ userData.image }}" height="45px" class="rounded" style="border-radius: 20rem;" />
+      </div>
+      <div class="pull-right ml-2">
+          <sup class="text-muted">{{ userData.email }}</sup><br/>
+          <sup>
+              <span> Earnings: <span class="rupeesCls"> {{ counterTotal }}</span> </span>
+              <span style="padding:0px 10px;">|</span>
+              <a href="javascript:void(0);" (click)="logout()" role="button">Log out</a>
+          </sup>
+          <!--<h3 class="stylish-font-yanone-kaffeesatz text-right"> Total Price: {{ totalPrice }} </h3>-->
+      </div>
+    </div>
+  </div>
+</section>

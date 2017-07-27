@@ -6,13 +6,19 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { HomepagenotificationsetupComponent } from './homepagenotificationsetup/homepagenotificationsetup.component';
-import { ItemlistService } from './itemlist.service';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { ProductionrequestsComponent } from './productionrequests/productionrequests.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { LoginComponent } from './login/login.component';
+import { FooditemsComponent } from './fooditems/fooditems.component';
+import { HeaderComponent } from './header/header.component';
+import { ItemlistComponent } from './itemlist/itemlist.component';
+import { CounterComponent } from './counter/counter.component';
 
 const routes = [
-  { path: '', name: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '', name: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: 'login', name: 'login', component: LoginComponent},
+  { path: 'fooditem', name: 'fooditem', component: FooditemsComponent},
   { path: 'home', name: 'home', component: HomepagenotificationsetupComponent },
   { path: 'productionRequests', name: 'productionRequests', component: ProductionrequestsComponent },
   { path: '**', component: PagenotfoundComponent }
@@ -24,7 +30,12 @@ const routes = [
     ProductionrequestsComponent,
     HomepagenotificationsetupComponent,
     PagenotfoundComponent,
-    SidebarComponent
+    SidebarComponent,
+    LoginComponent,
+    FooditemsComponent,
+    HeaderComponent,
+    ItemlistComponent,
+    CounterComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +43,7 @@ const routes = [
     HttpModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [ItemlistService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

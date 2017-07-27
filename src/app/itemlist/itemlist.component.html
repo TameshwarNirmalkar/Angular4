@@ -1,0 +1,16 @@
+<div class="columns is-desktop is-mobile">
+  <div class="column" role="button">
+      <!-- <h4 class="hidden">{{ product.id }}</h4> -->
+      <div class="fa-1x text-center">
+          <span class="">{{ product.name }}</span>
+          <span class="text-muted">
+              (<span class="rupeesCls"> {{ product.price }}</span>)
+          </span>
+      </div>
+      <div class="text-center">
+          <span>
+               <app-counter [(counter)]="product.quantity" [itemprice]="product.price" [(totalprice)]="product.totalperitem" [cartitems]="cartItems" [(finalprice)]="totalPrice"></app-counter> 
+          </span>
+      </div>
+  </div>
+</div>

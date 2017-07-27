@@ -1,7 +1,13 @@
 <div class="" style="height:100vh; background-color:#1c2b36; color:#fff;">
-  <ul>
-    <li *ngFor="let sidebar of sidebars; let i = index" style="padding:5px;">
-      <a routerLink="{{sidebar.routes}}" style="color:#5c798f;">{{sidebar.label}}</a>
-    </li>
-  </ul>
+  <section>
+    <img src="./assets/images/MPlogo1.png" style="max-height:20px;" />
+    <img style="-webkit-filter: invert(100%); filter: invert(100%); max-height:20px;" src="./assets/images/MPlogo.png" />
+  </section>
+  <section>
+    <ul>
+      <li *ngFor="let sidebar of sidebars; let i = index" style="padding:5px;">
+        <a routerLink="{{sidebar.routes}}" style="color:#5c798f;">{{sidebar.label}}</a>
+      </li>
+    </ul>
+  </section>
 </div>
