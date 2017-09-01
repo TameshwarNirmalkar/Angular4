@@ -1,12 +1,12 @@
 <section>
-  <app-header></app-header>
+  <app-header [counterTotal]="totalPrice"></app-header>
 </section>
 <section class="container">
   <div class="row">
     <div class="col-md-8 col-lg-9 col-sm-12">
       <div class="row" style="margin-right:5px;">
         <div class="col-md-4 col-sm-6 itemCls mb-3" role="button" *ngFor="let product of products | async; let i=index">
-          <app-itemlist [product]="product"></app-itemlist>
+          <app-itemlist [product]="product" [cartitems]="selectedItems" (click)="toggleCartItems(product, product.id)"></app-itemlist>
         </div>
       </div>
     </div>

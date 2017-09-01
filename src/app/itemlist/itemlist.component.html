@@ -1,5 +1,5 @@
-<div class="columns is-desktop is-mobile">
-  <div class="column" role="button">
+<div class="bg-faded">
+  <div class="" role="button">
       <!-- <h4 class="hidden">{{ product.id }}</h4> -->
       <div class="fa-1x text-center">
           <span class="">{{ product.name }}</span>
@@ -9,7 +9,8 @@
       </div>
       <div class="text-center">
           <span>
-               <app-counter [(counter)]="product.quantity" [itemprice]="product.price" [(totalprice)]="product.totalperitem" [cartitems]="cartItems" [(finalprice)]="totalPrice"></app-counter> 
+               <app-counter [cartitems]="cartitems"></app-counter>
+                <!--<app-counter [(counter)]="product.quantity" [itemprice]="product.price" [(totalprice)]="product.totalperitem" [cartitems]="cartitems" [(finalprice)]="tp"  -->
           </span>
       </div>
   </div>

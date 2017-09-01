@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Products } from './products.interface';
 @Component({
   selector: 'app-itemlist',
@@ -6,17 +6,19 @@ import { Products } from './products.interface';
   styleUrls: ['./itemlist.component.css']
 })
 export class ItemlistComponent implements OnInit {
-  @Input()
-  product: Products;
+  @Input() product: Products;
+  @Input() cartitems: Array<Object>;
+  // @Output() totalPriceChange = new EventEmitter<Number>();
 
-  constructor() { }
+  constructor() {
+    // this.totalPriceChange.emit(this.tp);
+  }
 
   ngOnInit() {
-    console.log( this.product );
   }
 
   addRemoveToCart(){
-
+    
   }
 
 }
